@@ -10,7 +10,7 @@ X = data[["TV", "Radio", "Newspaper"]]
 y = data["Sales"]
 
 # Split train/test
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.4, random_state=42)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
 
 # Train model
 model = LinearRegression()
@@ -21,7 +21,7 @@ y_pred = model.predict(X_test)
 r2 = r2_score(y_test, y_pred)
 mse = mean_squared_error(y_test, y_pred)
 
-print(f"Model trained successfully ✅")
+print(f"Model trained successfully done ✅")
 print(f"R2 Score: {r2:.3f}")
 print(f"MSE: {mse:.3f}")
 
